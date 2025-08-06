@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Visualisation 3D</title>
+    <title>L'identité en vrac</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <style>
       body {
@@ -10,7 +10,7 @@
         background-color: #b5ada1;
       }
       model-viewer {
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         background-color: #b5ada1;
       }
@@ -20,10 +20,16 @@
     <model-viewer
       src="BOB.glb"
       camera-controls
-      ar
-      environment-image="neutral"
-      exposure="1"
+      disable-zoom="false"
+      exposure="0.90"
       shadow-intensity="1"
+      environment-image="neutral"
+      min-camera-orbit="0deg 75deg 0.2m"
+      max-camera-orbit="auto auto 100m"
+      camera-orbit="45deg 75deg 1.5m"
+      auto-rotate="false"
+      background-color="#b5ada1"
+      alt="Modèle 3D de BOB"
     >
     </model-viewer>
   </body>
